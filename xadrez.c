@@ -38,7 +38,7 @@ int main(){
  // Quantidade de casas a mover: 2 para baixo, 1 para esquerda.
    
 
-    printf("\nMovimento do Cavalo:\n");
+    printf("\n\nMovimento do Cavalo:\n\n");
 
     // movimenta para baixo usando for.
 
