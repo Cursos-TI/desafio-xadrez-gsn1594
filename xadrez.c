@@ -7,6 +7,9 @@ int main(){
     int i = 1;
     int rainha= 8;
     int j = 1;
+    int j1 = 0;
+    const int cBaixo = 2;
+    const int cEsquerda = 1;
 
      // Movimento da Torre usando for.
     
@@ -30,6 +33,28 @@ int main(){
         printf("Esquerda\n");
         j++;
     } while (j <= rainha);
+
+
+ // Quantidade de casas a mover: 2 para baixo, 1 para esquerda.
+   
+
+    printf("\nMovimento do Cavalo:\n");
+
+    // movimenta para baixo usando for.
+
+    for (int i1 = 0; i1 < cBaixo; i1++) {
+        printf("Baixo\n");
+
+        // usando while para mover para a esquerda uma vez após descer.
+        
+        while (j1 < cEsquerda && i1 == cBaixo - 1) {
+            // Só executa quando terminou de descer (na última iteração do for)
+            printf("Esquerda\n");
+            j1++;
+        }
+    }
+
+
 
     return 0;
 
