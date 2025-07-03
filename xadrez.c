@@ -1,40 +1,49 @@
 #include <stdio.h>
 
+void mTorre(int casas){
+
+if(casas>0){
+    printf("Direita\n");
+    mTorre(casas-1);
+
+}
+}
+
+void mBispo(int casas1){
+
+if(casas1>0){
+    printf("Cima,Direita\n");
+    mBispo(casas1-1);
+
+}
+}
+void mRainha(int casas2){
+
+if(casas2>0){
+    printf("Esquerda\n");
+    mRainha(casas2-1);
+
+}
+}
+
 int main(){
 
-    int torre = 5;
-    int bispo = 5;
-    int i = 1;
-    int rainha= 8;
-    int j = 1;
     int j1 = 0;
     const int cBaixo = 2;
     const int cEsquerda = 1;
 
-     // Movimento da Torre usando for.
+    printf("\nMovimento da Torre:\n\n");
     
-    printf("Movimento da Torre:\n\n");
-    for (int i = 1; i <= torre; i++) {
-        printf("Direita\n");
-    }
-
-    // Movimento do Bispo usando while.
-   
+    mTorre(5);
+    
     printf("\n\nMovimento do Bispo:\n\n");
-    while (i <= bispo) {
-        printf("Cima,Direita\n");
-        i++;
-    }
-
-    // Movimento da Rainha usando do-while.
-   
-    printf("\n\nMovimento da Rainha:\n\n");
-    do {
-        printf("Esquerda\n");
-        j++;
-    } while (j <= rainha);
-
-
+    
+    mBispo(5);
+    
+    printf("\nMovimento da Rainha:\n\n");
+    
+    mRainha(8);
+    
  // Quantidade de casas a mover: 2 para baixo, 1 para esquerda.
    
 
@@ -53,8 +62,6 @@ int main(){
             j1++;
         }
     }
-
-
 
     return 0;
 
